@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 Reindeer Software (http://reindeersw.com)
+ */
+-->
+<config>
+    <modules>
+        <ReindeerSw_SbBanklink>
+            <version>0.0.1</version>
+        </ReindeerSw_SbBanklink>
+    </modules>
+    <global>
+        <models>
+            <reindeersw_sbbanklink>
+                <class>ReindeerSw_SbBanklink_Model</class>
+            </reindeersw_sbbanklink>
+        </models>
+        <helpers>
+            <reindeersw_sbbanklink>
+                <class>ReindeerSw_SbBanklink_Helper</class>
+            </reindeersw_sbbanklink>
+        </helpers>
+        <blocks>
+            <reindeersw_sbbanklink>
+                <class>ReindeerSw_SbBanklink_Block</class>
+            </reindeersw_sbbanklink>
+        </blocks>
+    </global>
+    <default>
+        <payment>
+            <reindeersw_sbbanklink>
+                <model>reindeersw_sbbanklink/standard</model>
+                <active>0</active>
+                <test_mode>0</test_mode>
+                <payment_action>sale</payment_action>
+                <title>SwedBank Banklink</title>
+                <submit_url>https://ib.swedbank.lt/banklink</submit_url>
+                <vk_snd_id></vk_snd_id>
+                <allowspecific>0</allowspecific>
+                <sort_order>1</sort_order>
+            </reindeersw_sbbanklink>
+        </payment>
+    </default>
+    <frontend>
+        <routers>
+            <reindeersw_sbbanklink>
+                <use>standard</use>
+                <args>
+                    <module>ReindeerSw_SbBanklink</module>
+                    <frontName>sbbanklink</frontName>
+                </args>
+            </reindeersw_sbbanklink>
+        </routers>
+    </frontend>
+</config>
